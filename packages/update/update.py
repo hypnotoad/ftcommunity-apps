@@ -174,7 +174,7 @@ class ProgressDialog(PlainDialog):
         self.vbox.addWidget(self.init_label)  # add init-label
         self.vbox.addStretch()
         self.setLayout(self.vbox)  # set vbox as central layout
-        start_timer = QTimer.singleShot(1000, self.start)  # start update in 1000ms
+        self.start_timer = QTimer.singleShot(1000, self.start)  # start update in 1000ms
         self.check_timer = QTimer()  # init checker timer
         self.check_timer.timeout.connect(self.checker)  # connect checker on timeout
 
